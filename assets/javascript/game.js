@@ -1,4 +1,4 @@
-//This is a giant object in which all of the game's logic and variables will be
+//This is a giant object in which all of the game's logic and variables will be stored.
 var videoGameGuessGame = {
   wordsToPick: {
     akuaku: {
@@ -122,6 +122,7 @@ var videoGameGuessGame = {
   // This function governs what happens when the user makes an incorrect guess (that they haven't guessed before).
   updateGuesses: function(letter) {
     // If the letter is not in the guessedLetters array, and the letter is not in the lettersOfTheWord array..
+    // -1 means not in the array because array starts at 0
     if ((this.guessedLetters.indexOf(letter) === -1) && (this.lettersOfTheWord.indexOf(letter) === -1)) {
 
       // Add the letter to the guessedLetters array.
